@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="TBL_EXPENSE_CATEGORY">
+		<item>Groceries</item>
+		<item>Entertainment</item>
+		<item>Transportation</item>
+		<item>Communication</item>
+		<item>Clothing</item>
+		<item>Rent</item>
+		<item>Study</item>
+		<item>Utilities</item>
+		<item>Others</item>
+	</string-array>
+	<string-array name="EXPENSE_CATEGORY_COLOR">
+	    <item>#1abc9c</item>
+	    <item>#2ecc71</item>
+	    <item>#27ae60</item>
+	    <item>#3498db</item>
+	    <item>#9b59b6</item>
+	    <item>#34495e</item>
+	    <item>#f1c40f</item>
+	    <item>#e67e22</item>
+	    <item>#e74c3c</item>
+	</string-array>
+	
+	<string-array name="currency_codes">
+	    <item>CAD</item>
+        <item>USD</item>
+        <item>CNY</item>
+        <item>EUR</item>                
+        <item>JPY</item>
+        <item>GBP</item>
+        <item>AUD</item>
+    </string-array>
+    
+	<array name="country_flag">
+	    <item>@drawable/cad</item>
+	    <item>@drawable/usd</item>
+	    <item>@drawable/cny</item>
+	    <item>@drawable/eur</item>
+	    <item>@drawable/jpy</item>
+	    <item>@drawable/gbp</item>
+	    <item>@drawable/aud</item>
+	</array>
+</resources>

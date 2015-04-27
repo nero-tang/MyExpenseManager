@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>    
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    	xmlns:swipe="http://schemas.android.com/apk/res-auto"
+    	android:layout_width="match_parent"
+    	android:layout_height="wrap_content" >
+
+    	<RelativeLayout
+        	android:id="@+id/list_backView"
+        	android:layout_width="match_parent"
+        	android:layout_height="match_parent"
+        	android:tag="back"
+        	android:background="@color/CLOUDS" >
+
+	        <Button
+	            android:id="@+id/expense_delete_button"
+	            android:layout_width="120dp"
+	            android:layout_height="match_parent"
+	            android:layout_alignParentRight="true"
+	            android:layout_centerInParent="true"
+	            android:background="@color/ALIZARIN"
+	            android:padding="20dp"
+	            android:text="DELETE"
+	            android:textColor="@color/white"
+	            android:textSize="20sp" />
+
+	        <Button
+	            android:id="@+id/expense_edit_button"
+	            android:layout_width="100dp"
+	            android:layout_height="match_parent"
+	            android:layout_centerInParent="true"
+	            android:layout_toLeftOf="@+id/expense_delete_button"
+	            android:background="@color/CONCRETE"
+	            android:padding="20dp"
+	            android:text="EDIT"
+	            android:textColor="@color/white"
+	            android:textSize="20sp" />
+        
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/list_frontView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:tag="front"
+        android:padding="10dp"
+        android:visibility="visible" >
+            
+            <ImageView
+        		android:id="@+id/category_color_imageView"
+        		android:layout_width="43dp"
+        		android:layout_height="43dp"
+        		android:background="@color/black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical" >
+                
+                
+           	<LinearLayout
+            	android:layout_width="match_parent"
+            	android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/category_name_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="TextView"
+                android:textColor="@color/CONCRETE"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/expense_amount_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="$ 1000"
+                android:textColor="#d35400"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/expense_date_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="Today"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+            </LinearLayout>
+            
+                <TextView
+            		android:id="@+id/expense_memo_textView"
+            		android:layout_width="wrap_content"
+            		android:layout_height="wrap_content"
+            		android:layout_marginTop="4dp"
+            		android:gravity="left"
+            		android:hint="Memo unavailable"
+            		android:textColor="@color/black"
+            		android:textSize="15sp" />
+
+        </LinearLayout>
+        
+   
+
+    	</LinearLayout>
+    </FrameLayout>
+    
+

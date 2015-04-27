@@ -1,0 +1,361 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ASBESTOS"
+    android:orientation="vertical" >
+    
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            android:orientation="horizontal"
+            android:background="@color/PETER_RIVER" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:padding="5dp"
+                android:gravity="center"
+                android:text="Overview"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/new_expense_button"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@color/transparent"
+                android:padding="5dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/add_icon" />
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+			android:layout_width="match_parent"
+             android:layout_height="0dp"
+             android:layout_weight="1"
+             android:layout_marginBottom="1dp"
+             android:background="@color/white"
+             android:orientation="vertical"
+             android:paddingBottom="5dp"
+             android:paddingLeft="10dp"
+             android:paddingRight="10dp"
+             android:paddingTop="5dp" >
+
+                    <TextView
+                        android:id="@+id/week"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="2.5dp"
+                        android:gravity="center"
+                        android:text="Sep. 30 - Oct. 6"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold|italic" />
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical|left"
+                        android:text="Expense:"
+                        android:textStyle="bold"
+                        android:textColor="@color/ASBESTOS"
+                        android:textSize="25sp" />
+
+                    <TextView
+                        android:id="@+id/weeklyEx_textView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:padding="5dp"
+                        android:text="$ 0.00"
+                        android:textColor="@color/transaction_payout_amount"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                    <ProgressBar
+                        android:id="@+id/budget_progressBar"
+                        style="@style/myProgressBar_main"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_margin="5dp"
+                        android:gravity="center" 
+                        android:max="100"
+                        android:progress="75" />
+                    
+                    
+
+                <RelativeLayout
+                    android:id="@+id/RelativeLayout1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp" >
+
+                    <TextView
+                        android:id="@+id/budget_title_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:gravity="center_vertical"
+                        android:text="Budget: "
+                        android:textColor="#2C3E50"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/budget_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/budget_title_textView"
+                        android:gravity="center_vertical"
+                        android:text="$ 1000"
+                        android:textStyle="bold"
+                        android:textColor="#d35400"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/percentage_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center_vertical"
+                        android:text="75%"
+                        android:textStyle="bold"
+                        android:textColor="#d35400"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/percentage_textView"
+                        android:gravity="center_vertical"
+                        android:text="Balance: "
+                        android:textColor="#2C3E50"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+
+                <ListView
+                    android:id="@+id/weeklyEx_listView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp" >
+                </ListView>
+
+         
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/dailyRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            android:background="@color/white" >
+
+            <RelativeLayout
+                android:id="@+id/dailyRow_frameLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true" >
+
+                <TextView
+                    android:id="@+id/dailyRow_month_textView"
+                    android:layout_width="64dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/upper_blank_calendar"
+                    android:gravity="center"
+                    android:text="Oct"
+                    android:textColor="#FFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/dailyRow_day_textView"
+                    android:layout_width="64dp"
+                    android:layout_height="42dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/dailyRow_month_textView"
+                    android:background="@drawable/lower_blank_calendar"
+                    android:gravity="center"
+                    android:text="3"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/dailyRow_arrow_imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="5dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/arrowhead_right_48" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/dailyRow_frameLayout"
+                android:text="Daily"
+                android:textColor="@color/CONCRETE"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@id/dailyRow_arrow_imageView"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/dailyEx_textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|right"
+                    android:text="$ 0"
+                    android:textColor="@color/transaction_payout_amount"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/monthlyRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            android:background="@color/white" >
+
+            <RelativeLayout
+                android:id="@+id/monthlyRow_frameLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true" >
+
+                <TextView
+                    android:id="@+id/monthlyRow_year_textView"
+                    android:layout_width="64dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/upper_blank_calendar"
+                    android:gravity="center"
+                    android:text="2013"
+                    android:textColor="#FFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/monthlyRow_month_textView"
+                    android:layout_width="64dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/monthlyRow_year_textView"
+                    android:background="@drawable/lower_blank_calendar"
+                    android:gravity="center"
+                    android:text="Oct"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/monthlyRow_arrow_imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="5dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/arrowhead_right_48" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/monthlyRow_frameLayout"
+                android:text="Monthly"
+                android:textColor="@color/CONCRETE"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@id/monthlyRow_arrow_imageView"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/monthlyEx_textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|right"
+                    android:text="$ 0"
+                    android:textColor="@color/transaction_payout_amount"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/CLOUDS" >
+        
+        <Button
+            android:id="@+id/edit_budget_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+			android:layout_alignParentLeft="true"
+			android:layout_centerInParent="true"
+			android:layout_margin="5dp"
+			android:text="Budget"
+			android:textColor="@color/ORANGE"
+			android:textSize="15sp"
+			android:background="@color/transparent"
+            android:padding="5dp" />
+        
+		<Button
+            android:id="@+id/voice_recog_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+			android:layout_centerInParent="true"
+			android:layout_margin="5dp"
+			android:text="Voice"
+			android:textColor="@color/ORANGE"
+			android:textSize="15sp"
+			android:background="@color/transparent"
+            android:padding="5dp" />
+        
+
+    </RelativeLayout>
+
+</LinearLayout>

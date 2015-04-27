@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.archangel.project"
+    android:versionCode="1"
+    android:versionName="1.0" >
+    
+    <uses-permission android:name="android.permission.INTERNET" /> 
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="18" />
+
+    <application
+        android:allowBackup="false"
+        android:hardwareAccelerated="true"
+        android:label="My Expense Manager"
+        android:icon="@drawable/ic_launcher" >
+        
+        <!-- Splash Screen Activity-->
+        <activity 
+            android:name="com.archangel.project.activities.SplashScreenActivity"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <!-- Main Activity -->
+        <activity 
+            android:name="com.archangel.project.activities.MainActivity"
+            android:theme="@style/Theme.Sherlock.Light" >
+        </activity>
+        
+        <!-- Edit Budget Activity -->
+        <activity 
+            android:name="com.archangel.project.activities.BudgetActivity"
+            android:theme="@style/Theme.Sherlock.Light" >
+        </activity>
+        
+        <!-- Transaction List Activity -->
+        <activity 
+            android:name="com.archangel.project.activities.TransactionListActivity"
+            android:theme="@style/Theme.Sherlock.Light" >
+        </activity>
+        
+    </application>
+
+</manifest>
